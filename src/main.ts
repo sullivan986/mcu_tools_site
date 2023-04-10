@@ -3,7 +3,6 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import { RouteRecordRaw, createWebHistory, createRouter } from 'vue-router'
-import { useMessage } from 'naive-ui'
 
 
 const routes: Array<RouteRecordRaw> = [
