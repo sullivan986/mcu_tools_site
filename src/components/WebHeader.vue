@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { defineComponent, h, Component } from 'vue'
-import { NGrid, NAvatar, NButton, NGridItem, NCard, NPageHeader, NGradientText } from 'naive-ui';
+import { NAvatar, NButton, NPageHeader } from 'naive-ui';
 import { RouterLink } from 'vue-router'
-import SerialDebug from '../apps/SerialDebug.vue'
 
 
 </script>

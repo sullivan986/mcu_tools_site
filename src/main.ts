@@ -3,7 +3,7 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import { RouteRecordRaw, createWebHistory, createRouter } from 'vue-router'
-
+declare module 'three';
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -17,6 +17,10 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: "/bledebug",
         component: () => import("./apps/BleDebug.vue"),
+    },
+    {
+        path: "/robotconnect",
+        component: () => import("./apps/RobotConnect.vue"),
     },
 ];
 

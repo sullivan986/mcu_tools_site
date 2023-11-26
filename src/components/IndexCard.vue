@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NCard, NGridItem, NGrid } from 'naive-ui'
+import { NCard } from 'naive-ui'
 import { RouterLink } from 'vue-router'
 
 interface Props {
@@ -27,5 +27,10 @@ const props = defineProps<Props>()
 <style scoped>
 .home-indexcard {
     padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
 }
 </style>
