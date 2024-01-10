@@ -208,4 +208,4 @@ onMounted(() => {
     width: 300px;
     max-width: 500px;
 }
-</style>
+</style>../types/types_serial../types/types_usb

@@ -9,7 +9,7 @@ import { RouterLink } from 'vue-router'
     <n-page-header title="Sullivan的工具小站" subtitle="一些简单的嵌入式调试工具" class="home-pageheader">
         <template #avatar>
             <router-link to="/">
-                <n-avatar class="home-headavatar" src="/header-avatar.svg" size="large" />
+                <n-avatar class="home-headavatar" src="/main-title.svg" size="large" />
             </router-link>
         </template>
         <template #extra>

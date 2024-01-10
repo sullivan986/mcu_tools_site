@@ -1,15 +1,12 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { NButton } from 'naive-ui'
-import SerialDebug from '../apps/SerialDebug.vue'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
 
-let newVariable: any;
 
-newVariable = window.navigator;
 
 async function openSerialPort() {
   if ("serial" in navigator) {

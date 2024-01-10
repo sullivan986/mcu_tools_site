@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import { NDivider, NGrid, NGi } from 'naive-ui'
-import { Scene } from 'three'
 
-let s = Scene();
 
 </script> 
 
 <template>
-    <n-divider>3D界面</n-divider>
+    <n-divider>以后再做</n-divider>
     <n-grid cols="4" item-responsive>
         <n-gi span="0 400:1 600:2 800:3">
             <div class="light-green">
