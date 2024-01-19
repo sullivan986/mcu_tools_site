@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { NButton, useMessage, NLog, NSpace, NSelect, NDivider, NGrid, NGi, NCard, LogInst } from 'naive-ui'
+import { NButton, useMessage, NLog, NSpace, NSelect, NDivider, NGrid, NGi, NCard } from 'naive-ui'
 import { onMounted, ref, watchEffect, nextTick } from 'vue';
 import { Terminal } from 'xterm'
 
 
 import 'xterm/css/xterm.css'
-
-import '../lib/types_serial'
-import '../lib/types_usb'
 
 
 // NMessage Tips
@@ -21,7 +18,6 @@ const term = new Terminal()
 
 // Log Tools
 const logMessageRef = ref('')
-const logInstRef = ref<LogInst | null>(null)
 
 // Serial Ports Data
 const baudrateRef = ref(0)
@@ -29,7 +25,7 @@ var portLock = false
 var nowSerialPortsRef: SerialPort
 
 var serialReader: ReadableStreamDefaultReader<Uint8Array> | undefined
-var serialWriter: WritableStreamDefaultWriter<Uint8Array> | undefined
+// var serialWriter: WritableStreamDefaultWriter<Uint8Array> | undefined
 
 
 const baudrateOptions = [
@@ -72,7 +68,7 @@ async function connectSerialPort() {
 
         await nowSerialPortsRef.open({ baudRate: baudrateRef.value })
         serialReader = nowSerialPortsRef.readable?.getReader()
-        serialWriter = nowSerialPortsRef.writable?.getWriter()
+        // serialWriter = nowSerialPortsRef.writable?.getWriter()
 
 
         while (portLock) {
@@ -111,18 +107,17 @@ async function testFunc1() {
 onMounted(() => {
     if ("serial" in navigator) {
         // Serial Event 
-        navigator.serial.addEventListener("connect", (e) => {
+        navigator.serial.addEventListener("connect", () => {
             logString("与串口建立连接")
         })
 
-        navigator.serial.addEventListener("disconnect", (e) => {
+        navigator.serial.addEventListener("disconnect", () => {
             logString("与串口失去连接")
         });
 
         // Log Auto Scroll 
         watchEffect(() => {
             nextTick(() => {
-                logInstRef.value?.scrollTo({ position: 'bottom', slient: true })
             })
 
         })

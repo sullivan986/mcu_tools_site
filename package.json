@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "dev-open": "vite --host 0.0.0.0 --port 58080",
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
@@ -12,14 +13,14 @@
     "echarts": "^5.4.3",
     "three": "^0.160.0",
     "urdf-loader": "^0.12.1",
-    "vue": "^3.4.5",
+    "vue": "^3.4.14",
     "vue-router": "^4.2.5",
     "xterm": "^5.3.0"
   },
   "devDependencies": {
     "@types/three": "^0.160.0",
-    "@vitejs/plugin-vue": "^5.0.2",
-    "naive-ui": "^2.37.0",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "naive-ui": "^2.37.3",
     "typescript": "^5.3.3",
     "vfonts": "^0.0.3",
     "vite": "^5.0.11",
